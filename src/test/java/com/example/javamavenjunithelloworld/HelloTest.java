@@ -36,7 +36,7 @@ public class HelloTest {
         hi.setTimes(3);
         hi.sayHello(stream);
 
-        // Does it say "Hello!" three times?
+        // Does it say "Hello!" three times? it does
         String goal = Hello.HELLO+"\r\n"+Hello.HELLO+"\r\n"+Hello.HELLO+"\r\n";
         assertThat(os.toString(), is(equalTo(goal)));
     }
