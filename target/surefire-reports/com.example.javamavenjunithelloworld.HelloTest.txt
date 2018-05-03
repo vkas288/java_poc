@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.example.javamavenjunithelloworld.HelloTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec <<< FAILURE! - in com.example.javamavenjunithelloworld.HelloTest
+testSayHello(com.example.javamavenjunithelloworld.HelloTest)  Time elapsed: 0.014 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is "Hello!\n"
+     but: was "Hello!\r\n"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.javamavenjunithelloworld.HelloTest.testSayHello(HelloTest.java:27)
+
+testSayHelloAFewTimes(com.example.javamavenjunithelloworld.HelloTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: is "Hello!\nHello!\nHello!\n"
+     but: was "Hello!\r\nHello!\r\nHello!\r\n"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:865)
+	at org.junit.Assert.assertThat(Assert.java:832)
+	at com.example.javamavenjunithelloworld.HelloTest.testSayHelloAFewTimes(HelloTest.java:41)
+
