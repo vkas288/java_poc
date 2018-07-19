@@ -189,9 +189,9 @@
 	  </build>
   <!--/reporting-->
 	<distributionManagement>
-		<repository>
+		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-		</repository>
+		</snapshotRepository>
 	</distributionManagement>
 </project>
