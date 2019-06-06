@@ -33,6 +33,17 @@ pipeline {
 		stage('package') {
 			steps {
 				sh "mvn package"
+				jacoco( 
+				      execPattern: 'target/*.exec',
+				      classPattern: 'target/classes',
+				      sourcePattern: 'src/main/java',
+				      exclusionPattern: 'src/test*'
+				)
+			}
+		}
+		stage('verify') {
+			steps {
+				sh "mvn verify"
 			}
 		}
 		stage('install') {
