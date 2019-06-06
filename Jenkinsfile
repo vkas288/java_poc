@@ -15,11 +15,34 @@ pipeline {
 
 	stages {
 
-		stage('maven') {
+		stage('validate') {
 			steps {
-				echo 'pre validate'
-				sh "mvn --version"
-				echo 'post validate'
+				sh "mvn validate"
+			}
+		}
+		stage('compile') {
+			steps {
+				sh "mvn compile"
+			}
+		}
+		stage('test') {
+			steps {
+				sh "mvn test"
+			}
+		}
+		stage('validate') {
+			steps {
+				sh "mvn package"
+			}
+		}
+		stage('validate') {
+			steps {
+				sh "mvn install"
+			}
+		}
+		stage('validate') {
+			steps {
+				sh "mvn deploy"
 			}
 		}
 	}
