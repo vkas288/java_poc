@@ -15,9 +15,11 @@ pipeline {
 
 	stages {
 
-		stage('Hello-World') {
+		stage('maven') {
 			steps {
-				echo 'hello world'
+				echo 'pre validate'
+				sh "mvn clean validate"
+				echo 'post validate'
 			}
 		}
 	}
