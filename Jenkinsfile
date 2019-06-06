@@ -42,7 +42,7 @@ pipeline {
 		}
 		stage('deploy') {
 			steps {
-				sh "mvn deploy"
+				sh "echo 'skipping mvn deploy'"
 			}
 		}
 	}
