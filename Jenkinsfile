@@ -18,8 +18,7 @@ pipeline {
 		stage('maven') {
 			steps {
 				echo 'pre validate'
-				sh "id -u jenkins"
-				sh "id 1005"
+				sh "mvn --version"
 				echo 'post validate'
 			}
 		}
