@@ -10,7 +10,7 @@ pipeline {
 	}
 
 	agent {
-		label 'Jenkins-Master'
+		label 'Jenkins-Node1'
 	}
 
 	stages {
